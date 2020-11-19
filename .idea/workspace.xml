@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -10,61 +13,47 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e7570e47-7603-4bf9-86c4-5cb0a7569ace" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.env.test" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/app.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/console" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/phpunit" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/bootstrap.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/cache.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/dev/debug.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/dev/monolog.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/dev/web_profiler.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/doctrine.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/doctrine_migrations.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/framework.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/mailer.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/notifier.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/prod/doctrine.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/prod/monolog.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/prod/routing.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/routing.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/sensio_framework_extra.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/test/framework.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/test/monolog.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/test/twig.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/test/validator.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/test/web_profiler.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/translation.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/validator.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/routes/annotations.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/routes/dev/framework.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/routes/dev/web_profiler.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/phpunit.xml.dist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Kernel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Migrations/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/bootstrap.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/translations/.gitignore" afterDir="false" />
+    <list default="true" id="e7570e47-7603-4bf9-86c4-5cb0a7569ace" name="Default Changelist" comment="init commit">
+      <change afterPath="$PROJECT_DIR$/src/Controller/DefaultController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/TodoController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Todo/Model/TodoItem.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Todo/TodoFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Todo/TodoRepositoryInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Todo/TodoService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Infrastructure/Persistence/DbalPostgresStorageAdapter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Infrastructure/Persistence/EntityInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Infrastructure/Persistence/MemoryStorageAdapter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Infrastructure/Persistence/ModelRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Infrastructure/Persistence/StorageAdapterInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Infrastructure/Todo/TodoRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20201119035607.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/default/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Domain/Todo/TodoServiceTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Infrastructure/Todo/TodoRepositoryTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.test" beforeDir="false" afterPath="$PROJECT_DIR$/.env.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/doctrine.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/doctrine.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/easy_admin.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes/easy_admin.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpunit.xml.dist" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml.dist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/components/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/components/TodoItemList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,10 +64,33 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration">
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="PhpDebugGeneral" xdebug_debug_port="10001" />
+  <component name="PhpServers">
+    <servers>
+      <server host="localhost" id="dd7b85a4-82fd-4986-96db-550d1893cc01" name="Docker" port="8080" use_path_mappings="true">
+        <path_mappings>
+          <mapping local-root="$PROJECT_DIR$" remote-root="/var/www/html" />
+        </path_mappings>
+      </server>
+    </servers>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="test_todo_dev_app:latest">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/twig/twig" />
       <path value="$PROJECT_DIR$/vendor/laminas/laminas-code" />
@@ -97,7 +109,6 @@
       <path value="$PROJECT_DIR$/vendor/symfony/property-access" />
       <path value="$PROJECT_DIR$/vendor/symfony/expression-language" />
       <path value="$PROJECT_DIR$/vendor/symfony/var-exporter" />
-      <path value="$PROJECT_DIR$/vendor/predis/predis" />
       <path value="$PROJECT_DIR$/vendor/symfony/maker-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/form" />
       <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
@@ -105,7 +116,6 @@
       <path value="$PROJECT_DIR$/vendor/symfony/doctrine-bridge" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
       <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
-      <path value="$PROJECT_DIR$/vendor/symfony/uid" />
       <path value="$PROJECT_DIR$/vendor/symfony/security-guard" />
       <path value="$PROJECT_DIR$/vendor/symfony/cache" />
       <path value="$PROJECT_DIR$/vendor/symfony/web-profiler-bundle" />
@@ -126,11 +136,9 @@
       <path value="$PROJECT_DIR$/vendor/symfony/config" />
       <path value="$PROJECT_DIR$/vendor/symfony/framework-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/security-bundle" />
-      <path value="$PROJECT_DIR$/vendor/symfony/inflector" />
       <path value="$PROJECT_DIR$/vendor/symfony/security-http" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
       <path value="$PROJECT_DIR$/vendor/symfony/dom-crawler" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-uuid" />
       <path value="$PROJECT_DIR$/vendor/symfony/serializer-pack" />
       <path value="$PROJECT_DIR$/vendor/symfony/browser-kit" />
       <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
@@ -143,7 +151,6 @@
       <path value="$PROJECT_DIR$/vendor/symfony/validator" />
       <path value="$PROJECT_DIR$/vendor/symfony/twig-bridge" />
       <path value="$PROJECT_DIR$/vendor/symfony/phpunit-bridge" />
-      <path value="$PROJECT_DIR$/vendor/easycorp/easyadmin-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/profiler-pack" />
       <path value="$PROJECT_DIR$/vendor/symfony/finder" />
       <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
@@ -167,7 +174,6 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
       <path value="$PROJECT_DIR$/vendor/doctrine/sql-formatter" />
       <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/reflection" />
       <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
       <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle" />
       <path value="$PROJECT_DIR$/vendor/composer" />
@@ -179,7 +185,6 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/persistence" />
       <path value="$PROJECT_DIR$/vendor/doctrine/migrations" />
       <path value="$PROJECT_DIR$/vendor/doctrine/orm" />
-      <path value="$PROJECT_DIR$/vendor/moneyphp/money" />
       <path value="$PROJECT_DIR$/vendor/jms/serializer" />
       <path value="$PROJECT_DIR$/vendor/jms/metadata" />
       <path value="$PROJECT_DIR$/vendor/jms/serializer-bundle" />
@@ -196,6 +201,33 @@
       <path value="$PROJECT_DIR$/vendor/psr/cache" />
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
       <path value="$PROJECT_DIR$/vendor/ocramius/proxy-manager" />
+      <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-invoker" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/cli-parser" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/complexity" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/lines-of-code" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/version" />
     </include_path>
   </component>
   <component name="ProjectId" id="1kQrTtFpjnixicuKYaWDUkQNvoY" />
@@ -208,10 +240,235 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../docker-compose.yml" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
+    <property name="settings.editor.selected.configurable" value="php.test.frameworks.configurable" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\gregs\Documents\Projects\_todo_app_test\app\src\Infrastructure\Todo" />
+      <recent name="C:\Users\gregs\Documents\Projects\_todo_app_test\app\src\Domain\Todo" />
+      <recent name="C:\Users\gregs\Documents\Projects\_todo_app_test\app\src\Infrastructure\Persistence" />
+    </key>
+  </component>
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1605766322000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="XDEBUG_SESSION" />
+                <option name="path" value="/" />
+                <option name="value" value="Docker" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/todo_items" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;name&quot;: &quot;test&quot;,&#10;  &quot;description&quot;: &quot;test description&quot;,&#10;  &quot;completed&quot;: false&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1605766322000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="XDEBUG_SESSION" />
+                <option name="path" value="/" />
+                <option name="value" value="Docker" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/todo_items" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1605762650000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="XDEBUG_SESSION" />
+                <option name="path" value="/" />
+                <option name="value" value="Docker" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/todo_items" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1605762650000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="XDEBUG_SESSION" />
+                <option name="path" value="/" />
+                <option name="value" value="Docker" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/todo_items" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;name&quot;: &quot;test&quot;,&#10;  &quot;description&quot;: &quot;test description&quot;,&#10;  &quot;completed&quot;: false&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1605756843000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="XDEBUG_SESSION" />
+                <option name="path" value="/" />
+                <option name="value" value="Docker" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/todo_items" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/todo_items" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="HTTP Request.POST todo_items">
+    <configuration name="TodoRepositoryTest.testAddTodoItem" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="App\Tests\Infrastructure\Todo\TodoRepositoryTest" configuration_file="/opt/project/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Infrastructure/Todo/TodoRepositoryTest.php" method="testAddTodoItem" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TodoRepositoryTest.testGetTodoItem" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="App\Tests\Infrastructure\Todo\TodoRepositoryTest" configuration_file="/opt/project/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Infrastructure/Todo/TodoRepositoryTest.php" method="testGetTodoItem" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TodoRepositoryTest.testGetTodoItemThrowException" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="App\Tests\Infrastructure\Todo\TodoRepositoryTest" configuration_file="/opt/project/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Infrastructure/Todo/TodoRepositoryTest.php" method="testGetTodoItemThrowException" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TodoRepositoryTest.testRemoveTodoItem" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="App\Tests\Infrastructure\Todo\TodoRepositoryTest" configuration_file="/opt/project/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Infrastructure/Todo/TodoRepositoryTest.php" method="testRemoveTodoItem" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TodoServiceTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="App\Tests\Domain\Todo\TodoServiceTest" configuration_file="/opt/project/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Domain/Todo/TodoServiceTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="phpunit.xml.dist" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner scope="XML" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="HTTP Request.POST todo_items" />
+      <item itemvalue="HTTP Request.GET todo_items" />
+      <item itemvalue="PHPUnit.phpunit.xml.dist" />
+      <item itemvalue="PHPUnit.TodoServiceTest" />
+      <item itemvalue="PHPUnit.TodoRepositoryTest.testGetTodoItem" />
+      <item itemvalue="PHPUnit.TodoRepositoryTest.testGetTodoItemThrowException" />
+      <item itemvalue="PHPUnit.TodoRepositoryTest.testRemoveTodoItem" />
+      <item itemvalue="PHPUnit.TodoRepositoryTest.testAddTodoItem" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHPUnit.TodoRepositoryTest.testAddTodoItem" />
+        <item itemvalue="PHPUnit.TodoRepositoryTest.testRemoveTodoItem" />
+        <item itemvalue="PHPUnit.TodoRepositoryTest.testGetTodoItemThrowException" />
+        <item itemvalue="PHPUnit.TodoRepositoryTest.testGetTodoItem" />
+        <item itemvalue="PHPUnit.TodoServiceTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -223,8 +480,27 @@
       <updated>1605643666890</updated>
       <workItem from="1605643668047" duration="3568000" />
       <workItem from="1605710081648" duration="431000" />
-      <workItem from="1605710714670" duration="536000" />
+      <workItem from="1605710714670" duration="24183000" />
+      <workItem from="1605741851812" duration="2663000" />
+      <workItem from="1605747816833" duration="9440000" />
+      <workItem from="1605758205383" duration="15263000" />
+      <workItem from="1605774510170" duration="15139000" />
     </task>
+    <task id="LOCAL-00001" summary="init commit">
+      <created>1605711382172</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1605711382172</updated>
+    </task>
+    <task id="LOCAL-00002" summary="init commit">
+      <created>1605711492943</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1605711492943</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,11 +520,163 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="init commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="init commit" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="461" y="165" key="SettingsEditor" timestamp="1605711261809">
+    <state x="547" y="174" key="#CLI_Interpreters" timestamp="1605778594276">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/-1080.-260.1080.1880@0.0.1920.1040" timestamp="1605711261809" />
+    <state x="547" y="174" key="#CLI_Interpreters/0.0.1920.1040/-1080.-260.1080.1880@0.0.1920.1040" timestamp="1605778594276" />
+    <state x="674" y="162" key="#PHP" timestamp="1605778259699">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="674" y="162" key="#PHP/0.0.1920.1040/-1080.-260.1080.1880@0.0.1920.1040" timestamp="1605778259699" />
+    <state x="683" y="229" key="#Servers" timestamp="1605759572918">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="683" y="229" key="#Servers/0.0.1920.1040/-1080.-260.1080.1880@0.0.1920.1040" timestamp="1605759572918" />
+    <state x="414" y="175" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605764096431">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="175" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-1080.-260.1080.1880@0.0.1920.1040" timestamp="1605764096431" />
+    <state x="765" y="202" key="#com.intellij.ide.util.MemberChooser" timestamp="1605752031115">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="202" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1080.-260.1080.1880@0.0.1920.1040" timestamp="1605752031115" />
+    <state x="714" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1605752205653">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="714" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/-1080.-260.1080.1880@0.0.1920.1040" timestamp="1605752205653" />
+    <state x="727" y="387" key="#com.intellij.ws.actions.HttpClientConvertFromCurlDialog" timestamp="1605752662344">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="727" y="387" key="#com.intellij.ws.actions.HttpClientConvertFromCurlDialog/0.0.1920.1040/-1080.-260.1080.1880@0.0.1920.1040" timestamp="1605752662344" />
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605778994096">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/-1080.-260.1080.1880@0.0.1920.1040" timestamp="1605778994096" />
+    <state x="740" y="446" key="#com.jetbrains.php.lang.intentions.PhpImportClassDialog#" timestamp="1605726735459">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="446" key="#com.jetbrains.php.lang.intentions.PhpImportClassDialog#/0.0.1920.1040/-1080.-260.1080.1880@0.0.1920.1040" timestamp="1605726735459" />
+    <state x="810" y="386" key="DockerComposeFileDialog" timestamp="1605778147377">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="810" y="386" key="DockerComposeFileDialog/0.0.1920.1040/-1080.-260.1080.1880@0.0.1920.1040" timestamp="1605778147377" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1605778146310">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1080.-260.1080.1880@0.0.1920.1040" timestamp="1605778146310" />
+    <state width="1877" height="470" key="GridCell.Tab.0.bottom" timestamp="1605789599505">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="470" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1080.-260.1080.1880@0.0.1920.1040" timestamp="1605789599505" />
+    <state width="1877" height="470" key="GridCell.Tab.0.center" timestamp="1605789599505">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="470" key="GridCell.Tab.0.center/0.0.1920.1040/-1080.-260.1080.1880@0.0.1920.1040" timestamp="1605789599505" />
+    <state width="1877" height="470" key="GridCell.Tab.0.left" timestamp="1605789599505">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="470" key="GridCell.Tab.0.left/0.0.1920.1040/-1080.-260.1080.1880@0.0.1920.1040" timestamp="1605789599505" />
+    <state width="1877" height="470" key="GridCell.Tab.0.right" timestamp="1605789599505">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="470" key="GridCell.Tab.0.right/0.0.1920.1040/-1080.-260.1080.1880@0.0.1920.1040" timestamp="1605789599505" />
+    <state width="1877" height="338" key="GridCell.Tab.1.bottom" timestamp="1605762639972">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="338" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1080.-260.1080.1880@0.0.1920.1040" timestamp="1605762639972" />
+    <state width="1877" height="338" key="GridCell.Tab.1.center" timestamp="1605762639971">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="338" key="GridCell.Tab.1.center/0.0.1920.1040/-1080.-260.1080.1880@0.0.1920.1040" timestamp="1605762639971" />
+    <state width="1877" height="338" key="GridCell.Tab.1.left" timestamp="1605762639971">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="338" key="GridCell.Tab.1.left/0.0.1920.1040/-1080.-260.1080.1880@0.0.1920.1040" timestamp="1605762639971" />
+    <state width="1877" height="338" key="GridCell.Tab.1.right" timestamp="1605762639971">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="338" key="GridCell.Tab.1.right/0.0.1920.1040/-1080.-260.1080.1880@0.0.1920.1040" timestamp="1605762639971" />
+    <state width="1877" height="338" key="GridCell.Tab.2.bottom" timestamp="1605762639972">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="338" key="GridCell.Tab.2.bottom/0.0.1920.1040/-1080.-260.1080.1880@0.0.1920.1040" timestamp="1605762639972" />
+    <state width="1877" height="338" key="GridCell.Tab.2.center" timestamp="1605762639972">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="338" key="GridCell.Tab.2.center/0.0.1920.1040/-1080.-260.1080.1880@0.0.1920.1040" timestamp="1605762639972" />
+    <state width="1877" height="338" key="GridCell.Tab.2.left" timestamp="1605762639972">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="338" key="GridCell.Tab.2.left/0.0.1920.1040/-1080.-260.1080.1880@0.0.1920.1040" timestamp="1605762639972" />
+    <state width="1877" height="338" key="GridCell.Tab.2.right" timestamp="1605762639972">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="338" key="GridCell.Tab.2.right/0.0.1920.1040/-1080.-260.1080.1880@0.0.1920.1040" timestamp="1605762639972" />
+    <state x="667" y="243" key="NewPhpClassDialog" timestamp="1605769846754">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="667" y="243" key="NewPhpClassDialog/0.0.1920.1040/-1080.-260.1080.1880@0.0.1920.1040" timestamp="1605769846754" />
+    <state x="447" y="214" width="1119" height="606" key="PhpMappingAdvancedResolveDialog" timestamp="1605759631728">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="447" y="214" width="1119" height="606" key="PhpMappingAdvancedResolveDialog/0.0.1920.1040/-1080.-260.1080.1880@0.0.1920.1040" timestamp="1605759631728" />
+    <state x="71" y="150" key="SettingsEditor" timestamp="1605778653267">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="71" y="150" key="SettingsEditor/0.0.1920.1040/-1080.-260.1080.1880@0.0.1920.1040" timestamp="1605778653267" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605712110532">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1080.-260.1080.1880@0.0.1920.1040" timestamp="1605712110532" />
+    <state x="620" y="264" width="838" height="715" key="com.jetbrains.php.test.PhpNewTestDialog" timestamp="1605778982736">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="620" y="264" width="838" height="715" key="com.jetbrains.php.test.PhpNewTestDialog/0.0.1920.1040/-1080.-260.1080.1880@0.0.1920.1040" timestamp="1605778982736" />
+    <state x="381" y="371" width="875" height="267" key="com.jetbrains.plugins.remotesdk.ui.RemoteMappingsConfiguration" timestamp="1605778621309">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="381" y="371" width="875" height="267" key="com.jetbrains.plugins.remotesdk.ui.RemoteMappingsConfiguration/0.0.1920.1040/-1080.-260.1080.1880@0.0.1920.1040" timestamp="1605778621309" />
+    <state x="667" y="253" width="585" height="534" key="find.popup" timestamp="1605767606962">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="667" y="253" width="585" height="534" key="find.popup/0.0.1920.1040/-1080.-260.1080.1880@0.0.1920.1040" timestamp="1605767606962" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1605785463763">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1080.-260.1080.1880@0.0.1920.1040" timestamp="1605785463763" />
+    <state x="623" y="225" key="search.everywhere.popup" timestamp="1605759034449">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" key="search.everywhere.popup/0.0.1920.1040/-1080.-260.1080.1880@0.0.1920.1040" timestamp="1605759034449" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/Infrastructure/Persistence/DbalPostgresStorageAdapter.php</url>
+          <line>38</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/Controller/TodoController.php</url>
+          <line>43</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/Infrastructure/Todo/TodoRepository.php</url>
+          <line>28</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/Controller/TodoController.php</url>
+          <line>31</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
