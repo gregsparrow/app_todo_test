@@ -1,0 +1,49 @@
+image: docker:stable
+
+before_script:
+  - apk add docker-compose
+        
+stages:
+  - Build image and push to registry
+  - Deploy and run
+  - Initialize
+
+docker_build:
+  stage: Build image and push to registry
+  only:
+    - master
+  script:
+    - docker build -t registry.gitlab.com/jetseeker/book-tickets-mvp:latest -t registry.gitlab.com/jetseeker/book-tickets-mvp:$CI_COMMIT_SHA --force-rm --compress -f ./docker/php/prod/Dockerfile .
+    - docker build -t registry.gitlab.com/jetseeker/book-tickets-mvp/nginx:latest --force-rm --compress -f ./docker/nginx/Dockerfile .
+    - echo "$REGISTRY_PASSWORD" | docker login registry.gitlab.com -u "$REGISTRY_USER" --password-stdin
+    - docker push registry.gitlab.com/jetseeker/book-tickets-mvp/nginx:latest 
+    - docker push registry.gitlab.com/jetseeker/book-tickets-mvp:latest 
+    - docker push registry.gitlab.com/jetseeker/book-tickets-mvp:$CI_COMMIT_SHA
+
+docker_deploy:
+  stage: Deploy and run
+  only:
+    - master
+  script:
+    - docker-compose down
+    - docker system prune -a -f
+    - docker volume rm $(docker volume ls | grep app_data_storage | awk '{ print $2 }')
+    - echo "$REGISTRY_PASSWORD" | docker login registry.gitlab.com -u "$REGISTRY_USER" --password-stdin
+    - docker-compose -f docker-compose.prod.yml pull
+    - docker-compose -f docker-compose.prod.yml up -d
+    - docker exec app php bin/console cache:warmup 
+    - docker exec app chown -R www-data:www-data /var/www/html 
+    - docker exec app chmod -R 755 /var/www/html
+  environment:
+    name: staging
+    url: http://149.28.164.88/
+
+docker_init:
+  stage: Initialize
+  only:
+    - master
+  script:
+    - docker exec app php bin/console doctrine:migrations:migrate --no-interaction
+    - docker exec app php bin/console app:import:locations
+    - docker exec app php bin/console app:import:aircraft
+    - docker exec app php bin/console app:import:airline

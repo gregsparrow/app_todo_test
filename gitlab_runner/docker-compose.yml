@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  gitlab-runner:
+    image: gitlab/gitlab-runner:alpine
+    container_name: gitlab_runner
+    restart: always
+    volumes:
+      - ./config/:/etc/gitlab-runner/
+      - /var/run/docker.sock:/var/run/docker.sock
+
+# https://stanislas.blog/2018/09/build-push-docker-images-gitlab-ci/
+# 
+#
+# 1 - upload gitlab_runner folde at server
+#
+# 2 - install docker, docker-compose
+#
+# 3 - register container at gitlab
+# docker-compose run --rm gitlab-runner register -n \
+# --url https://gitlab.com/ \
+# --registration-token RpZJW5eSZX2Tb1vP8Vev \
+# --executor docker \
+# --description "Jetseeker" \
+# --docker-image "docker:stable" \
+# --docker-volumes /var/run/docker.sock:/var/run/docker.sock
+#
+# 

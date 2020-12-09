@@ -1,0 +1,56 @@
+FROM alpine:latest as stash
+WORKDIR /git_clone
+RUN apk add --no-cache git
+RUN git clone https://docker:<token>@gitlab.com/jetseeker/book-tickets-mvp.git .
+
+FROM composer:latest as composer
+WORKDIR /app
+COPY --from=stash /git_clone/app .
+RUN composer install --ignore-platform-reqs --no-dev --optimize-autoloader --apcu-autoloader --no-scripts \
+    && \
+    composer dump-env prod
+
+FROM node:alpine as node
+WORKDIR /app
+COPY --from=composer /app .
+RUN yarn install
+RUN mkdir -p public \
+    && \
+    yarn encore production
+
+FROM php:fpm-alpine
+RUN apk add --no-cache --virtual .phpize-deps $PHPIZE_DEPS \
+        libxml2-dev \
+        icu-dev \
+        postgresql-dev \
+        && \
+    apk add \
+        libxml2 \
+        libintl \
+        icu \
+        postgresql \
+        && \
+    pecl install \
+        apcu \
+        redis \
+        && \
+    docker-php-ext-enable apcu --ini-name docker-php-ext-10-apcu.ini \
+    && \
+    docker-php-ext-enable redis --ini-name docker-php-ext-10-redis.ini \
+    && \
+    docker-php-ext-install -j$(nproc) \
+        opcache \
+        intl \
+        soap \
+        pdo_pgsql \
+        && \
+    apk del .phpize-deps \
+    && \
+    ln -sf "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
+COPY --from=stash /git_clone/docker/php/prod/php.ini /usr/local/etc/php/conf.d/custom.ini
+WORKDIR /var/www/html
+COPY --from=node /app .
+# RUN php bin/console cache:warmup --env=prod --no-debug
+RUN chown -R www-data:www-data /var/www/html \
+    && \
+    chmod -R 755 /var/www/html

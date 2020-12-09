@@ -1,0 +1,66 @@
+version: '3.4'
+
+services: 
+    nginx:
+        build: 
+            context: .
+            dockerfile: ./docker/nginx/Dockerfile
+        image: registry.gitlab.com/jetseeker/book-tickets-mvp/nginx
+        container_name: nginx
+        working_dir: /var/www/html
+        volumes: 
+            - app_data_storage:/var/www/html:rw
+            - nginx_log_storage:/var/log/nginx/
+        ports:
+            - '80:80'
+        networks:
+            - internal_prod
+        depends_on:
+            - app
+
+    postgres:
+        image: postgres:alpine
+        container_name: postgres
+        volumes: 
+            - pd_data_storage:/var/lib/postgresql/data
+        networks:
+            - internal_prod
+        environment: 
+            POSTGRES_DB: 'db_name'
+            POSTGRES_USER: 'db_user'
+            POSTGRES_PASSWORD: 'db_pass'
+
+    redis:
+        image: redis:alpine
+        container_name: 'redis'
+        command: redis-server --bind redis
+        volumes:
+            - redis_data_storage:/data
+        networks:
+            - internal_prod
+        
+    app:
+        build: 
+            context: .
+            dockerfile: ./docker/php/prod/Dockerfile
+        image: registry.gitlab.com/jetseeker/book-tickets-mvp
+        container_name: app
+        working_dir: /var/www/html
+        volumes: 
+            - app_data_storage:/var/www/html:rw
+        networks: 
+            - internal_prod
+        depends_on:
+            - postgres
+            - redis
+        environment:
+            - APP_ENV=prod
+
+networks: 
+    internal_prod:
+
+volumes:
+    app_data_storage:
+    redis_data_storage:
+    pd_data_storage:
+    nginx_log_storage:
