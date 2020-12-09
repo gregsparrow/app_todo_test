@@ -71,7 +71,7 @@ services:
         command: >
             sh -c "[ ! -f ./.env.local ] && echo "APP_ENV=dev" > ./.env.local || echo "" &&
                     composer install &&
-                    yarn install --force &&
+                    yarn install &&
                     yarn dev &&
                     composer dump-env dev &&
                     php bin/console cache:warmup &&
